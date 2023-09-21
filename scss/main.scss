@@ -1,76 +1,21 @@
 $theme-colors: (
-  "primary":    rgb(235, 236, 236),
-  "secondary":  rgb(228, 72, 33),
-  "success":    rgb(51, 236, 91),
-  "warning":    rgb(231, 228, 37),
-  "danger":     rgb(243, 42, 42),
-  "dark":       rgba(34, 36, 36,1)
+  "light": rgb(204, 220, 231),
+  "dark": rgb(0, 32, 54),
+  "primary": rgb(235, 236, 236),
+  "secondary": rgb(0, 81, 135),
+  "info": rgb(135, 135, 0),
+  "success": rgb(0, 152, 78),
+  "warning": rgb(227, 198, 0),
+  "danger": rgb(239, 0, 24),
 );
+
+$primary: map-get($theme-colors, "primary");
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-// GRID
-$grid-width: 100rem;
-$gutter-vertical: 0rem;
-$gutter-horizontal: 3rem;
-
-$bg-color: rgb(235, 236, 236);
-$bg-dark-color: rgba(34, 36, 36,1);
-
-$navbar-dark-color: $dark;
-
-#menu-principal {
-    .navbar {
-      .navbar-brand {
-        font-size: 24px; // Tamaño de fuente para el logotipo
-      }
-  
-      .nav-link {
-        font-size: 16px; // Tamaño de fuente para los elementos del menú
-      }
-
-      .navbar-nav {
-        .nav-item {
-            #social-media{
-                color: var(--bs-primary);
-            }
-            .bi {
-                color: var(--bs-secondary); // Cambiar el color de los íconos a blanco
-            }
-            .nav-link {
-                margin-right: 10px; // Agrega un margen derecho de 50px entre las opciones del menú
-            }
-        }
-      }
-      .dropdown-menu{
-        --bs-dropdown-zindex: 1000;
-        --bs-dropdown-min-width: 10rem;
-        --bs-dropdown-padding-x: 0;
-        --bs-dropdown-padding-y: 0rem;
-        --bs-dropdown-spacer: 10;
-        --bs-dropdown-font-size: 2rem;
-        --bs-dropdown-divider-margin-y: 0;
-        --bs-dropdown-link-active-bg: var(--bs-secondary-bg);
-        --bs-dropdown-link-color: var(--bs-body-color);
-        --bs-dropdown-link-hover-color: var(--bs-body-color);
-        --bs-dropdown-link-hover-bg: var(--bs-secondary-bg);
-        --bs-dropdown-link-active-color: var(--bs-secondary);
-        --bs-dropdown-item-padding-x: 1rem;
-        --bs-dropdown-item-padding-y: 0.5rem;
-        --bs-dropdown-header-padding-x: 0rem;
-        --bs-dropdown-header-padding-y: 0.5rem;
-        .dropdown-item {
-            font-size: 16px;
-            --bs-dropdown-border-color: var(--bs-border-color-dark);
-          }
-      }
-    }
-
-  }
-
 body {
-    background-color: $primary;
-    margin: 0;
+  background-color: $primary;
+  margin: 0;
 }
 
 * {
@@ -80,54 +25,93 @@ body {
 }
 
 html {
-   font-size: 10px
+  font-size: 14px;
 }
+
+h3 {
+  font-size: 20px;
+  color: var(--bs-secondary);
+}
+
+h4 {
+  font-size: 16px;
+  color: var(--bs-secondary);
+}
+
+.outer-card {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  display: flex;
+  background-color: var(--bs-white); /* Color de fondo blanco */
+  border: 1px solid var(--bs-white); /* Borde gris claro opcional */
+  border-radius: 5px; /* Bordes redondeados */
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+h1 {
+  font-family: Verdana, sans-serif;
+  font-size: 40x;
+  margin-bottom: 5px;
+  margin-top: 5%;
+  color: var(--bs-secondary);
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-family: Verdana, sans-serif;
+  font-size: 30px;
+  margin-bottom: 5px;
+  margin-top: 2%;
+  color: var(--bs-secondary);
+  display: flex;
+  justify-content: left;
+}
+
+
 
 .row {
-    max-width: $grid-width;
-    margin: 0 auto;
-    &:not(:last-child) {
-        margin-bottom: $gutter-vertical;
-    }
+  padding: 2%;
 
-    &::after {
-        content: "";
-        display: table;
-        clear: both;
+    h2 {
+      font-family: Verdana, sans-serif;
+      font-size: 24px;
+      margin-bottom: 0;
+      color: var(--bs-secondary);
     }
-
-    [class^="col-"] {
-        float: left;
-        background-color: $secondary;
+    .card {
+      margin-top: 4%;
+      margin-bottom: 3%;
+      background-color: var(--bs-white);
+      border: 1px solid var(--bs-white);
+      border-radius: 5px;
+  
+      .card-body {
+        display: flex;
+        align-items: center;
         padding: 1rem;
-        &:not(:last-child) {
-            margin-right: $gutter-horizontal;
+  
+        .bi {
+          margin-right: 4%;
+          font-size: 80px;
+          color: var(--bs-secondary);
         }
-    }
-
-    .col-1-of-2 {
-        width: calc((100% - #{$gutter-horizontal}) / 2);
-
-    }
-
-    .col-1-of-3 {
-        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
-    }
-
-    .col-2-of-3 {
-        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
-    }
-
-    .col-1-of-4 {
-        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-    }
-
-    .col-2-of-4 {
-        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
-    }
-
-    .col-3-of-4 {
-        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
-    }
-
+      }
+  
+      .card-text {
+        text-align: left;
+        font-family: Verdana, sans-serif;
+  
+        h3 {
+          font-size: 20px;
+          color: var(--bs-secondary);
+        }
+  
+        h4 {
+          font-size: 16px;
+          color: var(--bs-secondary);
+        }
+      }
+  } 
 }
+

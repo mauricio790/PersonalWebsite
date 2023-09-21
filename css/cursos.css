@@ -11986,51 +11986,29 @@ html {
   font-size: 14px;
 }
 
-.outer-card {
-  margin-top: 2%;
-  margin-bottom: 2%;
+h1, .h1 {
+  font-family: Verdana, sans-serif;
+  font-size: 65px;
+  margin-bottom: 5px;
+  margin-top: 5%;
+  color: var(--bs-secondary);
   display: flex;
-  background-color: var(--bs-white); /* Color de fondo blanco */
-  border: 1px solid var(--bs-white); /* Borde gris claro opcional */
-  border-radius: 5px; /* Bordes redondeados */
-  overflow: hidden; /* Evita que el contenido se desborde */
+  justify-content: center;
 }
 
-.row {
-  padding: 2%;
-}
-.row h2, .row .h2 {
+h2, .h2 {
   font-family: Verdana, sans-serif;
-  font-size: 24px;
-  margin-bottom: 0;
-  color: var(--bs-secondary);
-}
-.row .card {
-  margin-top: 4%;
-  margin-bottom: 3%;
-  background-color: var(--bs-white);
-  border: 1px solid var(--bs-white);
-  border-radius: 5px;
-}
-.row .card .card-body {
+  font-size: 30px;
+  margin-bottom: 5px;
+  margin-top: 2%;
   display: flex;
-  align-items: center;
-  padding: 1rem;
+  justify-content: left;
 }
-.row .card .card-body .bi {
-  margin-right: 4%;
-  font-size: 80px;
-  color: var(--bs-secondary);
+
+.mb-8 {
+  margin-bottom: 8%;
 }
-.row .card .card-text {
-  text-align: left;
-  font-family: Verdana, sans-serif;
-}
-.row .card .card-text h3, .row .card .card-text .h3 {
-  font-size: 20px;
-  color: var(--bs-secondary);
-}
-.row .card .card-text h4, .row .card .card-text .h4 {
-  font-size: 16px;
-  color: var(--bs-secondary);
-}/*# sourceMappingURL=main.css.map */
+
+.mb-6 {
+  margin-bottom: 6%;
+}/*# sourceMappingURL=cursos.css.map */

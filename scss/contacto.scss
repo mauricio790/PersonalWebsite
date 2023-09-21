@@ -1,0 +1,27 @@
+$theme-colors: (
+  "light": rgb(204, 220, 231),
+  "dark": rgb(0, 32, 54),
+  "primary": rgb(235, 236, 236),
+  "secondary": rgb(0, 81, 135),
+  "info": rgb(135, 135, 0),
+  "success": rgb(0, 152, 78),
+  "warning": rgb(227, 198, 0),
+  "danger": rgb(239, 0, 24),
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  background-color: $primary;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
